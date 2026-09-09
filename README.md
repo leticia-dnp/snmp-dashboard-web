@@ -41,11 +41,10 @@ snmp-dashboard-web/
 │   └── js/dashboard.js     # Requisições assíncronas e atualização da UI
 └── README.md
 
-👥 Equipe e contribuições
+👥 Equipe e contribuições:
+
 Integrantes e	Contribuição
-Letícia do Nascimento Pereira: Configuração do agente SNMP e testes de conectividade, Desenvolvimento do frontend (HTML/CSS/JS) e  Documentação e gravação do vídeo de apresentação
-Vagner Silveira Rocha Jr. Desenvolvimento do backend (Flask + coleta SNMP), Configuração do agente SNMP e testes de conectividade e Documentação e gravação do vídeo de apresentação
+- Letícia do Nascimento Pereira: Configuração do agente SNMP e testes de conectividade, Desenvolvimento do frontend (HTML/CSS/JS) e  Documentação e gravação do vídeo de apresentação.
+- Vagner Silveira Rocha Jr. Desenvolvimento do backend (Flask + coleta SNMP), Configuração do agente SNMP e testes de conectividade e Documentação e gravação do vídeo de apresentação.
 
-🎥 Vídeo de demonstração
-
-📺 Link do vídeo:
+🎥 Vídeo de demonstração:
