@@ -8,22 +8,13 @@ Como o ambiente de laboratório não permite acesso de administrador na máquina
 ✅ O código-fonte completo, disponível neste repositório;
 ✅ A contribuição individual de cada integrante da equipe.
 
-⚙️ Funcionalidades
+⚙️ Funcionalidades:
+
 Consulta automática de dados SNMP a cada intervalo configurável;
 Exibição dos dados em cards e tabelas em uma página web responsiva;
 Atualização assíncrona via JavaScript (sem necessidade de recarregar a página);
 Tratamento de erros de conexão/timeout com o agente SNMP;
 Configuração do host, porta e community via variáveis de ambiente.
-
-🧩 Dados coletados (MIB-2 / RFC 1213):
-Foram escolhidos 5 itens do grupo System da MIB-2, consultados via SNMP GET:
-
-#	Item	OID	Descrição
-1	sysDescr	1.3.6.1.2.1.1.1.0	Descrição textual do sistema (SO, hardware)
-2	sysUpTime	1.3.6.1.2.1.1.3.0	Tempo decorrido desde a última reinicialização do agente
-3	sysContact	1.3.6.1.2.1.1.4.0	Contato responsável pelo dispositivo
-4	sysName	1.3.6.1.2.1.1.5.0	Nome administrativo do dispositivo
-5	sysLocation	1.3.6.1.2.1.1.6.0	Localização física do dispositivo
 
 💡 Como item extra (bônus), o dashboard também pode listar as interfaces de rede (ifTable — OID 1.3.6.1.2.1.2.2), exibindo nome, status e tráfego de entrada/saída.
 
