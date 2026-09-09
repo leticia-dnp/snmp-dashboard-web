@@ -9,14 +9,13 @@ Como o ambiente de laboratório não permite acesso de administrador na máquina
 ✅ A contribuição individual de cada integrante da equipe.
 
 ⚙️ Funcionalidades:
+- Consulta automática de dados SNMP a cada intervalo configurável;
+- Exibição dos dados em cards e tabelas em uma página web responsiva;
+- Atualização assíncrona via JavaScript (sem necessidade de recarregar a página);
+- Tratamento de erros de conexão/timeout com o agente SNMP;
+- Configuração do host, porta e community via variáveis de ambiente.
 
-Consulta automática de dados SNMP a cada intervalo configurável;
-Exibição dos dados em cards e tabelas em uma página web responsiva;
-Atualização assíncrona via JavaScript (sem necessidade de recarregar a página);
-Tratamento de erros de conexão/timeout com o agente SNMP;
-Configuração do host, porta e community via variáveis de ambiente.
-
-💡 Como item extra (bônus), o dashboard também pode listar as interfaces de rede (ifTable — OID 1.3.6.1.2.1.2.2), exibindo nome, status e tráfego de entrada/saída.
+💡 Como item bônus, o dashboard também pode listar as interfaces de rede (ifTable — OID 1.3.6.1.2.1.2.2), exibindo nome, status e tráfego de entrada/saída.
 
 🏗️ Arquitetura
 ┌─────────────┐      HTTP       ┌──────────────┐      SNMP GET/WALK      ┌──────────────┐
@@ -24,11 +23,8 @@ Configuração do host, porta e community via variáveis de ambiente.
 │ (Dashboard)  │ ◀────────────── │ (app.py)      │ ◀─────────────────────── │  (snmpd)      │
 └─────────────┘   JSON (fetch)  └──────────────┘        Rede/Localhost     └──────────────┘
 
-O snmpd roda como serviço na máquina alvo, expondo a MIB-2 na porta 161/UDP.
-A aplicação Flask consulta o agente via snmpget/snmpwalk (Net-SNMP).
-O frontend (HTML/CSS/JS) busca os dados via fetch() no endpoint /api/snmp-data e atualiza o dashboard automaticamente.
+📁 Estrutura do projeto:
 
-📁 Estrutura do projeto
 snmp-dashboard-web/
 ├── app.py                 # Aplicação Flask (rotas web e API)
 ├── snmp_client.py          # Camada de coleta de dados via SNMP
@@ -41,9 +37,8 @@ snmp-dashboard-web/
 │   └── js/dashboard.js     # Requisições assíncronas e atualização da UI
 └── README.md
 
-👥 Equipe e contribuições:
+👥 Integrantes e	Contribuição:
 
-Integrantes e	Contribuição
 - Letícia do Nascimento Pereira: Configuração do agente SNMP e testes de conectividade, Desenvolvimento do frontend (HTML/CSS/JS) e  Documentação e gravação do vídeo de apresentação.
 - Vagner Silveira Rocha Jr. Desenvolvimento do backend (Flask + coleta SNMP), Configuração do agente SNMP e testes de conectividade e Documentação e gravação do vídeo de apresentação.
 
