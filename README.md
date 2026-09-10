@@ -41,5 +41,3 @@ snmp-dashboard-web/
 
 - Letícia do Nascimento Pereira: Configuração do agente SNMP e testes de conectividade, Desenvolvimento do frontend (HTML/CSS/JS) e  Documentação e gravação do vídeo de apresentação.
 - Vagner Silveira Rocha Jr. Desenvolvimento do backend (Flask + coleta SNMP), Configuração do agente SNMP e testes de conectividade e Documentação e gravação do vídeo de apresentação.
-
-🎥 Vídeo de demonstração:
